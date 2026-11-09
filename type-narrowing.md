@@ -1,13 +1,12 @@
-
 # Type Narrowing in TypeScript
 
 ## Introduction
 
-Type Narrowing is a important feature of TypeScript that allow developers to reduce a variable's posible types within a specific section of code. It helps handle union types safly and prevent type related errors during developement.
+Type Narrowing is a important feature of TypeScript that allows developers to reduce a variable's posible types within a specific section of code. It helps handle union types safly and prevents type-related errors during development.
 
 ## Detailed Explanation
 
-TypeScript use different techniques to narrow types. One common technique is the `typeof` operator, which check primitive data types such as strings, numbers, and booleans.
+TypeScript uses different techniques to narrow types. One common technique is the `typeof` operator, which checks primitive data types such as strings, numbers, and booleans.
 
 ```typescript
 function processValue(value: string | number): void {
@@ -19,7 +18,7 @@ function processValue(value: string | number): void {
 }
 ```
 
-Another usefull technique is `instanceof`. It checks wheather an object belong to a particular class.
+Another useful technique is `instanceof`. It checks wheather an object belongs to a particular class.
 
 ```typescript
 class Car {
@@ -37,7 +36,7 @@ function startVehicle(vehicle: Car | Date): void {
 }
 ```
 
-The `in` operator check whether a particular property exist in an object. It is useful when working with diffrent object strucutres.
+The `in` operator checks if a particular property exists in an object. It is useful when working with diffrent object structures.
 
 ```typescript
 type Admin = { name: string; permissions: string[] };
@@ -52,8 +51,8 @@ function getInfo(person: Admin | User): void {
 }
 ```
 
-In each example, TypeScript understand the type more precisley inside the relevant conditional block.
+In each example, TypeScript understands the type more precisly inside the relevant conditional block.
 
 ## Conclusion
 
-Type Narrowing make TypeScript applications safer and easier to maintain. Using `typeof`, `instanceof`, and the `in` operator help developers work with multiple types without relying on unsafe type assertions.
+Type Narrowing makes TypeScript applications safer and easier to maintain. Using `typeof`, `instanceof`, and the `in` operator helps developers work with multiple types without relying on unsafe type assertions.
