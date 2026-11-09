@@ -1,9 +1,8 @@
-// problem 1
+
 function multiplyValue(value: number, multiplier?: number): number {
     return value * (multiplier ?? 2);
 }
 
-// Problem 2
 function processInput(value: string | number | boolean): string | number {
     if (typeof value === "string") {
         return value.trim().toLowerCase();
@@ -16,7 +15,7 @@ function processInput(value: string | number | boolean): string | number {
     return value ? "Active" : "Inactive";
 }
 
-//Problm 3
+
 function formatCoordinate(
     coordinate: readonly [number, number, string]
 ): string {
@@ -24,12 +23,12 @@ function formatCoordinate(
     return `Location: ${locationName} (${latitude}, ${longitude})`;
 }
 
-//Problem 4
+
 function concatenateArrays<T>(...arrays: T[][]): T[] {
     return arrays.reduce((result, array) => result.concat(array), [] as T[]);
 }
 
-// Problem 5
+
 interface Course {
     title: string;
     students: number;
@@ -42,12 +41,12 @@ function getPopularCourses(courses: Course[], minStudents: number): Course[] {
     );
 }
 
-// Problem 6
+
 function pluckValues<T,K extends keyof T>(items: T[], key: K): T[K][] {
     return items.map(item => item[key]);
 }
 
-// Problem7
+
 class Employee {
     protected name: string;
     private baseSalary: number;
@@ -75,7 +74,7 @@ class Manager extends Employee {
     }
 }
 
-//Problem  8
+
 function validateAgeAsync(age: number): Promise<string> {
     return new Promise((resolve, reject) => {
         if (age < 18) {
